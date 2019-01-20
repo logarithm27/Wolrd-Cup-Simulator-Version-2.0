@@ -14,41 +14,28 @@ namespace WorldCup
         public Ui(ref Canvas canvas)
         {
             Rectangles = new List<Rectangle>();
-            InitRectangles
+            InitRectanglesOnPots
             (
-                (double)CanvasParameters.CanvasMaxLeft,
-                (double)CanvasParameters.CanvasMaxTop, 
+                (double)UiParameters.CanvasPotsParameters.CanvasMaxLeft,
+                (double)UiParameters.CanvasPotsParameters.CanvasMaxTop, 
                 ref canvas
             );
         }
-        private enum ShapeParameters
-        {
-            Width=40,
-            Height=21,
-            StrokeThickness = 1,
-        }
-
-        private enum CanvasParameters
-        {
-            CanvasMaxTop = 282,
-            CanvasMaxLeft= 490,
-            AddByOnCanvasTop = 40,
-            AddByOnCanvasLeft = 160,
-        }
-
-        private void InitRectangles(double left,double top,ref Canvas canvas)
+      
+        private void InitRectanglesOnPots(double left,double top,ref Canvas canvas)
         {
             if (top<0)
             {
-                left -= (double)CanvasParameters.AddByOnCanvasLeft;
-                top = (double)CanvasParameters.CanvasMaxTop;
+                left -= (double)UiParameters.CanvasPotsParameters.AddByOnCanvasLeft;
+                top = (double)UiParameters.CanvasPotsParameters.CanvasMaxTop;
             }
             if (left < 0)
                 return;
             AddRectangleOnCanvas(left, top, ref canvas);
-            top -= (double)CanvasParameters.AddByOnCanvasTop;
-            InitRectangles(left, top, ref canvas);
+            top -= (double)UiParameters.CanvasPotsParameters.AddByOnCanvasTop;
+            InitRectanglesOnPots(left, top, ref canvas);
         }
+
 
         private void AddRectangleOnCanvas(double left, double top, ref Canvas canvas)
         {
@@ -62,15 +49,17 @@ namespace WorldCup
         {
              var rect = new Rectangle
             {
-                Height = (double)ShapeParameters.Height,
-                Width = (double)ShapeParameters.Width,
+                Height = (double)UiParameters.ShapeParameters.Height,
+                Width = (double)UiParameters.ShapeParameters.Width,
                 Stroke = Brushes.Black,
             };
             var converter = new BrushConverter();
             var brush = (Brush)converter.ConvertFromString("#FFF4F4F5");
             rect.Fill = brush;
-            rect.StrokeThickness = (double)ShapeParameters.StrokeThickness;
+            rect.StrokeThickness = (double)UiParameters.ShapeParameters.StrokeThickness;
             return rect;
         }
     }
+
+    
 }
