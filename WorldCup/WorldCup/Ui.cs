@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
-//Maftoul Omar 2019
+//Maftoul Omar 2019 hello
 namespace WorldCup
 {
     public  class Ui
