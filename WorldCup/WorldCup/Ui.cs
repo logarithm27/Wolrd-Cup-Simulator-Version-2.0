@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
-//Maftoul Omar 2019 hello test test
+
 namespace WorldCup
 {
     public  class Ui
