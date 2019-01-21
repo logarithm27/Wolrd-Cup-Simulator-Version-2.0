@@ -84,24 +84,19 @@ namespace WorldCup
             return rect;
         }
 
-        private void CreateImages(double left,double top,ref Canvas canvas,int imageNumber)
+        private void CreateImages(double left, double top, ref Canvas canvas, int imageNumber)
         {
-            if (top < 0)
-                return;
-            var image = new Image
+            while (true)
             {
-                Width = (double) UiParameters.ImageParameters.Width,
-                Height = (double) UiParameters.ImageParameters.Height
-            };
-            var confederation = (Confederation.ConfederationCode) imageNumber;
-            image.Cursor = Cursors.Hand;
-            image.ToolTip = confederation.ToString();
-            ConfederationsImages.Add(confederation.ToString(), image);
-            AddElementOnCanvas(image, left, top, ref canvas);
-            InsertImage(image,imageNumber);
-            top -= (double)UiParameters.ImageParameters.AddByOnTop;
-            imageNumber--;
-            CreateImages(left, top, ref canvas,imageNumber);
+                if (top < 0) return;
+                var confederation = (Confederation.ConfederationCode) imageNumber;
+                var image = new Image {Width = (double) UiParameters.ImageParameters.Width, Height = (double) UiParameters.ImageParameters.Height, Cursor = Cursors.Hand, ToolTip = confederation.ToString()};
+                ConfederationsImages.Add(confederation.ToString(), image);
+                AddElementOnCanvas(image, left, top, ref canvas);
+                InsertImage(image, imageNumber);
+                top -= (double) UiParameters.ImageParameters.AddByOnTop;
+                imageNumber--;
+            }
         }
 
         private void InsertImage(Image image,int imageNumber)
