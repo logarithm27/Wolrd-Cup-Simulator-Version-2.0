@@ -91,6 +91,8 @@ namespace WorldCup
                 if (top < 0) return;
                 var confederation = (Confederation.ConfederationCode) imageNumber;
                 var image = new Image {Width = (double) UiParameters.ImageParameters.Width, Height = (double) UiParameters.ImageParameters.Height, Cursor = Cursors.Hand, ToolTip = confederation.ToString()};
+                image.MouseEnter += onMouseOverImage;
+                image.MouseLeave += onMouseOutsideImage;
                 ConfederationsImages.Add(confederation.ToString(), image);
                 AddElementOnCanvas(image, left, top, ref canvas);
                 InsertImage(image, imageNumber);
@@ -108,6 +110,20 @@ namespace WorldCup
             var url =new Uri(relativePath);
             image.Source = new BitmapImage(url);
         }
+
+        private void onMouseOverImage(object sender, MouseEventArgs e)
+        {
+            var image = (Image) sender;
+            image.Opacity = 0.5;
+        }
+
+        private void onMouseOutsideImage(object sender, MouseEventArgs e)
+        {
+            var image = (Image) sender;
+            image.Opacity = 1;
+        }
+
+
     }
 
     
