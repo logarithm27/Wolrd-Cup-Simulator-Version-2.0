@@ -50,8 +50,7 @@ namespace WorldCup
             //Add each rectangle to Canvas
             AddRectangleOnCanvas(left, top, ref canvas);
             //Draw next rectangle on the same pot
-            top -= (double)UiParameters.CanvasPotsParameters.AddByOnCanvasTop;
-            InitRectanglesOnPots(left, top, ref canvas);
+            InitRectanglesOnPots(left, top -(double)UiParameters.CanvasPotsParameters.AddByOnCanvasTop, ref canvas);
         }
 
 
