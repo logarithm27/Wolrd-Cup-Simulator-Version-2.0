@@ -1,4 +1,5 @@
-﻿/*All components (rectangles on pots/groups) are relative to canvas (it's important to remember).
+﻿/*Maftoul Omar 2019
+ * All components (rectangles on pots/groups) are relative to canvas (it's important to remember).
         *VALUES ARE CONSISTENT with :
         *         -The graphical visualization
         *         -Number of rectangles to draw
