@@ -1,25 +1,35 @@
 ﻿/*Maftoul Omar 2019*/
 
+using System;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace WorldCup
 {
     public  class Ui
     {
-
         public List<Rectangle> Rectangles { get; }
+        public Dictionary<string,Image> ConfederationsImages { get; }
         public Ui(ref Canvas canvas)
         {
             Rectangles = new List<Rectangle>();
+            ConfederationsImages = new Dictionary<string,Image>();
             InitRectanglesOnPots
             (
                 (double)UiParameters.CanvasPotsParameters.CanvasMaxLeft,
                 (double)UiParameters.CanvasPotsParameters.CanvasMaxTop, 
                 ref canvas
             );
+            CreateImages(
+                (double) UiParameters.ImageParameters.Left,
+                (double) UiParameters.ImageParameters.Top,
+                ref canvas,
+                (int) Confederation.ConfederationCode.SouthAmerica);
         }
          //Initializing rectangles in each pot
         //Left and Top are margins relatives to the canvas (Rectangles are inside Canvas)
@@ -48,11 +58,16 @@ namespace WorldCup
         private void AddRectangleOnCanvas(double left, double top, ref Canvas canvas)
         {
             var rect = CreateRectangle();
-            Canvas.SetTop(rect, top);
-            Canvas.SetLeft(rect, left);
-            canvas.Children.Add(rect);
+            AddElementOnCanvas(rect, left, top, ref canvas);
             //add rectangles to List of rectangles
             Rectangles.Add(rect);
+        }
+
+        private void AddElementOnCanvas(UIElement element,double left,double top, ref Canvas canvas)
+        {
+            Canvas.SetTop(element,top);
+            Canvas.SetLeft(element,left);
+            canvas.Children.Add(element);
         }
         private Rectangle CreateRectangle()
         {
@@ -67,6 +82,36 @@ namespace WorldCup
             rect.Fill = brush;
             rect.StrokeThickness = (double)UiParameters.ShapeParameters.StrokeThickness;
             return rect;
+        }
+
+        private void CreateImages(double left,double top,ref Canvas canvas,int imageNumber)
+        {
+            if (top < 0)
+                return;
+            var image = new Image
+            {
+                Width = (double) UiParameters.ImageParameters.Width,
+                Height = (double) UiParameters.ImageParameters.Height
+            };
+            var confederation = (Confederation.ConfederationCode) imageNumber;
+            image.Cursor = Cursors.Hand;
+            image.ToolTip = confederation.ToString();
+            ConfederationsImages.Add(confederation.ToString(), image);
+            AddElementOnCanvas(image, left, top, ref canvas);
+            InsertImage(image,imageNumber);
+            top -= (double)UiParameters.ImageParameters.AddByOnTop;
+            imageNumber--;
+            CreateImages(left, top, ref canvas,imageNumber);
+        }
+
+        private void InsertImage(Image image,int imageNumber)
+        {
+            var directory = @"pack://application:,,,/ConfederationImages/";
+            var extention = ".png";
+            var imageNumberToString = imageNumber.ToString();
+            var relativePath = directory + imageNumberToString+extention;
+            var url =new Uri(relativePath);
+            image.Source = new BitmapImage(url);
         }
     }
 

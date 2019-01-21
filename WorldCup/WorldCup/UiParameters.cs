@@ -19,6 +19,15 @@ namespace WorldCup
             Height = 20,
             StrokeThickness = 1,
         }
+
+        public enum ImageParameters
+        {
+            Width = 50,
+            Height=50,
+            Top = 260,
+            Left = 700,
+            AddByOnTop=50
+        }
        
         public enum CanvasPotsParameters
         {
@@ -38,5 +47,7 @@ namespace WorldCup
             AddByOnCanvasTop = 30,
             AddByOnCanvasLeft = 100,
         }
+
+        
     }
 }

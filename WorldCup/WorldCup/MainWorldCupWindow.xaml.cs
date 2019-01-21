@@ -1,8 +1,11 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
 
 namespace WorldCup
 {
@@ -47,7 +50,7 @@ namespace WorldCup
             // BeginAnimation Starts an animation for a specified animated property on this element.
             trans.BeginAnimation(TranslateTransform.YProperty, topAnimation);
             trans.BeginAnimation(TranslateTransform.XProperty, leftAnimation);
-            //MessageBox.Show(Canvas.GetTop(_userInterface.Rectangles[31]).ToString());
+            //MessageBox.Show(Canvas.GetTop(_userInterface.ConfederationsImages.First().Value);
         }
     }
 }
