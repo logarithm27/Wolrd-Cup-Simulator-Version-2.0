@@ -42,7 +42,7 @@ namespace WorldCup
                     left,
                     (double) UiParameters.CanvasGroupsParameters.CanvasMinLeft
                     + (double) UiParameters.CanvasGroupsParameters.AddByOnCanvasLeft - left,
-                    TimeSpan.FromSeconds(2)
+                    TimeSpan.FromSeconds(2.3)
                 );
             // BeginAnimation Starts an animation for a specified animated property on this element.
             trans.BeginAnimation(TranslateTransform.YProperty, topAnimation);
