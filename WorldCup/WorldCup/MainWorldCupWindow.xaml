@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWorldCupWindow" Height="638" Width="800">
     <Grid Margin="0,0,0,-2">
-        <Button x:Name="button" Content="Draw" HorizontalAlignment="Left" Margin="243,380,0,0" VerticalAlignment="Top" Width="79" Click="DrawButtonClick"/>
+        <Button x:Name="button" Content="Draw" HorizontalAlignment="Left" Margin="244,380,0,0" VerticalAlignment="Top" Width="79" Click="DrawButtonClick"/>
         <Label x:Name="pot_1" Content="Pot 1" HorizontalAlignment="Left" Margin="9,33,0,0" VerticalAlignment="Top"/>
         <Label x:Name="pot_2" Content="Pot 2" HorizontalAlignment="Left" Margin="169,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.757,0.538"/>
         <Label x:Name="label_Copy1" HorizontalAlignment="Left" Margin="331,33,0,0" VerticalAlignment="Top"/>
