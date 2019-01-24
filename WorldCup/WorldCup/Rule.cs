@@ -6,7 +6,7 @@ namespace WorldCup
         public  const int TeamsPerPot = 8;
         public const int MaxGroups = 8;
         public const int MaxPots = 4;
-        public const int MaxConfederation = 6;
+        public const int MxNumOfConfederations = 6;
         public enum Confederation
         {
             Asia ='A',
