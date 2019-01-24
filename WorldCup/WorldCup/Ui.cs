@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -92,6 +93,7 @@ namespace WorldCup
                 var image = new Image {Width = (double) UiParameters.ImageParameters.Width, Height = (double) UiParameters.ImageParameters.Height, Cursor = Cursors.Hand, ToolTip = confederation.ToString()};
                 image.MouseEnter += onMouseOverImage;
                 image.MouseLeave += onMouseOutsideImage;
+                image.MouseLeftButtonUp += onMouseClickImage;
                 ConfederationsImages.Add(confederation.ToString(), image);
                 AddElementOnCanvas(image, left, top, ref canvas);
                 InsertImage(image, imageNumber);
@@ -120,6 +122,14 @@ namespace WorldCup
         {
             var image = (Image) sender;
             image.Opacity = 1;
+        }
+
+        private void onMouseClickImage(object sender, MouseEventArgs e)
+        {
+            var image = (Image) sender;
+            var whichConfederation = ConfederationsImages.FirstOrDefault(i =>i.Value.Equals(image));
+            var confederationName = Enum.GetName(typeof(Confederation.ConfederationCode), whichConfederation.Value);
+            MessageBox.Show(confederationName);
         }
 
 
