@@ -29,7 +29,7 @@ namespace WorldCup
                 (double) UiParameters.ImageParameters.Left,
                 (double) UiParameters.ImageParameters.Top,
                 ref canvas,
-                Rule.);
+                Rule.MxNumOfConfederations);
         }
          //Initializing rectangles in each pot
         //Left and Top are margins relatives to the canvas (Rectangles are inside Canvas)
