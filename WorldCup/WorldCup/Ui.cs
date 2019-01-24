@@ -12,7 +12,7 @@ using System.Windows.Shapes;
 
 namespace WorldCup
 {
-    public partial class Ui
+    public  class Ui
     {
         public List<Rectangle> Rectangles { get; }
         public Dictionary<string,Image> ConfederationsImages { get; }
@@ -93,7 +93,7 @@ namespace WorldCup
                 var image = new Image {Width = (double) UiParameters.ImageParameters.Width, Height = (double) UiParameters.ImageParameters.Height, Cursor = Cursors.Hand, ToolTip = confederation.ToString()};
                 image.MouseEnter += onMouseOverImage;
                 image.MouseLeave += onMouseOutsideImage;
-                image.MouseLeftButtonUp += onMouseClickImage;
+                image.MouseLeftButtonUp += OnMouseClickImage;
                 ConfederationsImages.Add(confederation.ToString(), image);
                 AddElementOnCanvas(image, left, top, ref canvas);
                 InsertImage(image, imageNumber);
@@ -124,7 +124,7 @@ namespace WorldCup
             image.Opacity = 1;
         }
 
-        private void onMouseClickImage(object sender, MouseEventArgs e)
+        private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
             var image = (Image) sender;
             var whichConfederation = ConfederationsImages.FirstOrDefault(i =>i.Value.Equals(image));
