@@ -128,8 +128,8 @@ namespace WorldCup
         {
             var image = (Image) sender;
             var whichConfederation = ConfederationsImages.FirstOrDefault(i =>i.Value.Equals(image));
-            var confederationName = Enum.GetName(typeof(Confederation.ConfederationCode), whichConfederation.Value);
-            MessageBox.Show(confederationName);
+            //var confederationName = Enum.GetName(typeof(Confederation.ConfederationCode), whichConfederation.Value);
+            MessageBox.Show(whichConfederation.Key);
         }
 
 
