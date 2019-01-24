@@ -12,7 +12,7 @@ using System.Windows.Shapes;
 
 namespace WorldCup
 {
-    public  class Ui
+    public partial class Ui
     {
         public List<Rectangle> Rectangles { get; }
         public Dictionary<string,Image> ConfederationsImages { get; }
@@ -128,11 +128,7 @@ namespace WorldCup
         {
             var image = (Image) sender;
             var whichConfederation = ConfederationsImages.FirstOrDefault(i =>i.Value.Equals(image));
-            //var confederationName = Enum.GetName(typeof(Confederation.ConfederationCode), whichConfederation.Value);
-            MessageBox.Show(whichConfederation.Key);
         }
-
-
     }
 
     
