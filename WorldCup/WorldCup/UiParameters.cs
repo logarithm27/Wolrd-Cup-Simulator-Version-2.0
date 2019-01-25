@@ -5,7 +5,7 @@
         *         -Number of rectangles to draw
         *before changing these values, make sure having a nice UI to see,
         *and do the calculations that will varies on how much teams you want to have
-        *i.e : i draw a rectangle that have 282 (as max top value),
+        *i.e : i drew a rectangle that have 282 (as max top value),
         * and I drew another one by subtracting -40 from 282 until I reach 0, hence 282/40 ~=7 (I need 8 Teams)
         *Each pot holds 8 rectangles (teams), 
 */
