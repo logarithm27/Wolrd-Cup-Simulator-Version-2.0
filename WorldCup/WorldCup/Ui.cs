@@ -82,7 +82,7 @@ namespace WorldCup
             rect.StrokeThickness = (double)UiParameters.ShapeParameters.StrokeThickness;
             return rect;
         }
-
+        //Create Images of confederation
         private void CreateImages(double left, double top, ref Canvas canvas, int imageNumber)
         {
             while (true)
