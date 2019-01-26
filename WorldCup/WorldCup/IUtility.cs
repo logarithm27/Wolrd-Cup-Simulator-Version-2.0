@@ -7,7 +7,7 @@ namespace WorldCup
         public  interface IUtility
         {
             object DictionarySearchByKey(Dictionary<object,object> collection,object obj);
-            bool DictionaryContains(object obj);
+            bool DictionaryContains(Dictionary<object, object> collection,object obj);
             object DictionarySearchByValue(Dictionary<object, object> collection,object obj);
         }
 }
