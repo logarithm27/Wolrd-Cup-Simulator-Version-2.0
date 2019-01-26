@@ -132,7 +132,7 @@ namespace WorldCup
 
         public List<Rectangle> GetRectangles()
         {
-            return this._rectangles;
+            return _rectangles;
         }
 
 
