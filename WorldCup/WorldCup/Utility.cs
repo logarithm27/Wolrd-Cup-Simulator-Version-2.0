@@ -2,11 +2,8 @@
 
 namespace WorldCup
 {
-        public static class Utility
+        public  interface IUtility
         {
-            public static object searchLinq(object e)
-            {
-                /*TO DO*/
-            }
+            object DictionarySearch(object e);
         }
 }
