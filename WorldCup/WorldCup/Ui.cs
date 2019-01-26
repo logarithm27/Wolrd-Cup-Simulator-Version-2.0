@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -15,11 +14,11 @@ namespace WorldCup
     public  class Ui
     {
         private List<Rectangle> _rectangles;
-        private readonly Dictionary<string, Image> _confederationsImages;
+        private readonly Dictionary<object, object> _confederationsImages;
         public Ui(ref Canvas canvas)
         {
             _rectangles = new List<Rectangle>();
-            _confederationsImages = new Dictionary<string,Image>();
+            _confederationsImages = new Dictionary<object,object>();
             InitRectanglesOnPots
             (
                 (double)UiParameters.CanvasPotsParameters.CanvasMaxLeft,
@@ -127,7 +126,8 @@ namespace WorldCup
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
             var image = (Image) sender;
-            var whichConfederation = _confederationsImages.FirstOrDefault(i =>i.Value.Equals(image));
+            var whichConfederation = Utility.GetKeyByValue(_confederationsImages, image);
+            MessageBox.Show(whichConfederation.ToString());
         }
 
         public List<Rectangle> GetRectangles()
