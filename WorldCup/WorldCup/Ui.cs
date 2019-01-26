@@ -14,12 +14,12 @@ namespace WorldCup
 {
     public  class Ui
     {
-        public List<Rectangle> Rectangles { get; }
-        public Dictionary<string,Image> ConfederationsImages { get; }
+        private List<Rectangle> _rectangles;
+        private readonly Dictionary<string, Image> _confederationsImages;
         public Ui(ref Canvas canvas)
         {
-            Rectangles = new List<Rectangle>();
-            ConfederationsImages = new Dictionary<string,Image>();
+            _rectangles = new List<Rectangle>();
+            _confederationsImages = new Dictionary<string,Image>();
             InitRectanglesOnPots
             (
                 (double)UiParameters.CanvasPotsParameters.CanvasMaxLeft,
@@ -60,7 +60,7 @@ namespace WorldCup
             var rect = CreateRectangle();
             AddElementOnCanvas(rect, left, top, ref canvas);
             //add rectangles to List of rectangles
-            Rectangles.Add(rect);
+            _rectangles.Add(rect);
         }
 
         private void AddElementOnCanvas(UIElement element,double left,double top, ref Canvas canvas)
@@ -94,7 +94,7 @@ namespace WorldCup
                 image.MouseEnter += onMouseOverImage;
                 image.MouseLeave += onMouseOutsideImage;
                 image.MouseLeftButtonUp += OnMouseClickImage;
-                ConfederationsImages.Add(confederation.ToString(), image);
+                _confederationsImages.Add(confederation.ToString(), image);
                 AddElementOnCanvas(image, left, top, ref canvas);
                 InsertImage(image, imageNumber);
                 top -= (double) UiParameters.ImageParameters.AddByOnTop;
@@ -127,8 +127,15 @@ namespace WorldCup
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
             var image = (Image) sender;
-            var whichConfederation = ConfederationsImages.FirstOrDefault(i =>i.Value.Equals(image));
+            var whichConfederation = _confederationsImages.FirstOrDefault(i =>i.Value.Equals(image));
         }
+
+        public List<Rectangle> GetRectangles()
+        {
+            return this._rectangles;
+        }
+
+
     }
 
     
