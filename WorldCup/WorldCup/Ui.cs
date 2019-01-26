@@ -13,11 +13,11 @@ namespace WorldCup
 {
     public  class Ui
     {
-        private List<Rectangle> _rectangles;
+        private List<object> _rectangles;
         private readonly Dictionary<object, object> _confederationsImages;
         public Ui(ref Canvas canvas)
         {
-            _rectangles = new List<Rectangle>();
+            _rectangles = new List<object>();
             _confederationsImages = new Dictionary<object,object>();
             InitRectanglesOnPots
             (
@@ -130,7 +130,7 @@ namespace WorldCup
             MessageBox.Show(whichConfederation.ToString());
         }
 
-        public List<Rectangle> GetRectangles()
+        public List<object> GetRectangles()
         {
             return _rectangles;
         }
