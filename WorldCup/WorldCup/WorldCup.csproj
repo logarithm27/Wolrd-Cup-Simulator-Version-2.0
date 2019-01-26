@@ -60,7 +60,7 @@
     <Compile Include="Rule.cs" />
     <Compile Include="Ui.cs" />
     <Compile Include="UiParameters.cs" />
-    <Compile Include="Utility.cs" />
+    <Compile Include="IUtility.cs" />
     <Page Include="MainWorldCupWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
