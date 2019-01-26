@@ -55,12 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AUtility.cs" />
     <Compile Include="Confederation.cs" />
     <Compile Include="Rule.cs" />
     <Compile Include="Ui.cs" />
     <Compile Include="UiParameters.cs" />
-    <Compile Include="IUtility.cs" />
+    <Compile Include="Utility.cs" />
     <Page Include="MainWorldCupWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
