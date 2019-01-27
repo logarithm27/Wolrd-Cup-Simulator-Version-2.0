@@ -14,7 +14,11 @@ namespace WorldCup
     public  class Ui
     {
         private List<object> _rectangles;
+        public List<object> Rectangles => _rectangles;
         private readonly Dictionary<object, object> _confederationsImages;
+        private ComboBox _teamSelector;
+        public ComboBox TeamSelector { get => _teamSelector; set => _teamSelector = value; }
+
         public Ui(ref Canvas canvas)
         {
             _rectangles = new List<object>();
@@ -30,6 +34,8 @@ namespace WorldCup
                 (double) UiParameters.ImageParameters.Top,
                 ref canvas,
                 Rule.MxNumOfConfederations);
+            TeamSelector = new ComboBox{Width = 94};
+            AddElementOnCanvas(TeamSelector, 560,128, ref canvas);
         }
          //Initializing rectangles in each pot
         //Left and Top are margins relatives to the canvas (Rectangles are inside Canvas)
@@ -127,11 +133,6 @@ namespace WorldCup
             var image = (Image) sender;
             var whichConfederation = Utility.GetKeyByValue(_confederationsImages, image);
             MessageBox.Show(whichConfederation.ToString());
-        }
-
-        public List<object> GetRectangles()
-        {
-            return _rectangles;
         }
 
 
