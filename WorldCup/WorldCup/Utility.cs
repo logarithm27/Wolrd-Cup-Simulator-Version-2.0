@@ -8,15 +8,19 @@ namespace WorldCup
 {
         public  static class  Utility
         {
+            //Get a value on a dictionary by a key
             public static object GetValueByKey(Dictionary<object, object> collection, object obj)
             {
+                //verifying if key is part of dictionary 
                 if (collection.ContainsKey(obj))
                     return collection.FirstOrDefault(i => i.Value.Equals(obj)).Value;
                 throw new System.NotImplementedException();
             }
 
+            //Get a value on a dictionary by a value
             public static object GetKeyByValue(Dictionary<object, object> collection, object obj)
             {
+                //verifying if value is part of dictionary 
                 if (collection.ContainsValue(obj))
                     return collection.FirstOrDefault(i => i.Value.Equals(obj)).Key;
                 throw new System.NotImplementedException();
