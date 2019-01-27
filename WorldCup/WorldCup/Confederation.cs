@@ -13,11 +13,11 @@ namespace WorldCup
             Africa =2,
             [Description("Europe")]
             Europe =3,
-            [Description("NorthAmerica")]
+            [Description("North America")]
             NorthAmerica =4,
             [Description("Oceania")]
             Oceania =5,
-            [Description("SouthAmerica")]
+            [Description("South America")]
             SouthAmerica =6
         }
     }

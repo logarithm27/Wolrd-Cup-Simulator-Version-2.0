@@ -107,8 +107,7 @@ namespace WorldCup
             var extention = ".png";
             var imageNumberToString = imageNumber.ToString();
             var relativePath = directory + imageNumberToString+extention;
-            var url =new Uri(relativePath);
-            image.Source = new BitmapImage(url);
+            image.Source = new BitmapImage(new Uri(relativePath));
         }
 
         private void onMouseOverImage(object sender, MouseEventArgs e)
