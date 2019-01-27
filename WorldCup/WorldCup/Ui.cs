@@ -34,7 +34,7 @@ namespace WorldCup
                 (double) UiParameters.ImageParameters.Top,
                 ref canvas,
                 Rule.MxNumOfConfederations);
-            TeamSelector = new ComboBox{Width = 94};
+            TeamSelector = new ComboBox{Width = 105};
             AddElementOnCanvas(TeamSelector, 560,128, ref canvas);
         }
          //Initializing rectangles in each pot
@@ -130,9 +130,10 @@ namespace WorldCup
 
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
-            var image = (Image) sender;
-            var whichConfederation = Utility.GetKeyByValue(_confederationsImages, image);
-            MessageBox.Show(whichConfederation.ToString());
+            _teamSelector.Items.Clear();
+            //Get the corresponding confederation to the clicked image and insert on combobox's first item
+            _teamSelector.Items.Insert(0, Utility.GetKeyByValue(_confederationsImages, sender));
+            _teamSelector.SelectedIndex = 0;
         }
 
 
