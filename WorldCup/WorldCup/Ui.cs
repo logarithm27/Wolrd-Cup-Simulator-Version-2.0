@@ -6,22 +6,25 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
 
 namespace WorldCup
 {
     public  class Ui
     {
-        private List<object> _rectangles;
-        public List<object> Rectangles => _rectangles;
+        private List<Rectangle> _rectangles;
+        public List<Rectangle> Rectangles()=>_rectangles;
         private readonly Dictionary<object, object> _confederationsImages;
-        private ComboBox _teamSelector;
-        public ComboBox TeamSelector { get => _teamSelector; set => _teamSelector = value; }
+        private ListBox _teamSelector;
+        public ListBox TeamSelector { get => _teamSelector; set => _teamSelector = value; }
 
         public Ui(ref Canvas canvas)
         {
-            _rectangles = new List<object>();
+            _rectangles = new List<Rectangle>();
             _confederationsImages = new Dictionary<object,object>();
             InitRectanglesOnPots
             (
@@ -34,8 +37,8 @@ namespace WorldCup
                 (double) UiParameters.ImageParameters.Top,
                 ref canvas,
                 Rule.MxNumOfConfederations);
-            TeamSelector = new ComboBox{Width = 105};
-            AddElementOnCanvas(TeamSelector, 560,128, ref canvas);
+            TeamSelector = new ListBox(){Width = 135,Height = 80};
+            AddElementOnCanvas(TeamSelector, 550,128, ref canvas);
         }
          //Initializing rectangles in each pot
         //Left and Top are margins relatives to the canvas (Rectangles are inside Canvas)
@@ -62,10 +65,10 @@ namespace WorldCup
 
         private void AddRectangleOnCanvas(double left, double top, ref Canvas canvas)
         {
-            var rect = CreateRectangle();
-            AddElementOnCanvas(rect, left, top, ref canvas);
+            var rectangle = CreateRectangle();
+            AddElementOnCanvas(rectangle, left, top, ref canvas);
             //add rectangles to List of rectangles
-            _rectangles.Add(rect);
+            _rectangles.Add(rectangle);
         }
 
         private void AddElementOnCanvas(UIElement element,double left,double top, ref Canvas canvas)
@@ -76,17 +79,16 @@ namespace WorldCup
         }
         private Rectangle CreateRectangle()
         {
-             var rect = new Rectangle
+            var rectangle =  new Rectangle
             {
-                Height = (double)UiParameters.ShapeParameters.Height,
-                Width = (double)UiParameters.ShapeParameters.Width,
+                Height = (double) UiParameters.ShapeParameters.Height,
+                Width = (double) UiParameters.ShapeParameters.Width,
                 Stroke = Brushes.Black,
-            };
-            var converter = new BrushConverter();
-            var brush = (Brush)converter.ConvertFromString("#FFF4F4F5");
-            rect.Fill = brush;
-            rect.StrokeThickness = (double)UiParameters.ShapeParameters.StrokeThickness;
-            return rect;
+                Fill = (Brush)new BrushConverter().ConvertFromString("#FFF4F4F5"),
+                StrokeThickness = (double) UiParameters.ShapeParameters.StrokeThickness
+        };
+            rectangle.MouseLeftButtonUp += OnRectangleClick;
+            return rectangle;
         }
         //Create Images of confederation
         private void CreateImages(double left, double top, ref Canvas canvas, int imageNumber)
@@ -117,17 +119,41 @@ namespace WorldCup
             var image = (Image) sender;
             image.Opacity = 1;
         }
-
+        /*Dumb method*/
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
             _teamSelector.Items.Clear();
-            //Get the corresponding confederation to the clicked image and insert on combobox's first item
             _teamSelector.Items.Insert(0, Utility.GetKeyByValue(_confederationsImages, sender));
-            _teamSelector.SelectedIndex = 0;
+            //Get the corresponding confederation to the clicked image and insert on combobox's first item
+            for (int i = 1; i < 80; i++)
+            {
+                var confederation = "test";
+                Label label = new Label();
+                label.Content = confederation;
+                Canvas canvas = new Canvas { Width = 45, Height = 25 };
+                var rectangle = new Rectangle
+                {
+                    Width = 40,
+                    Height = 20,
+                    Stroke = Brushes.Black,
+                };
+                Canvas.SetTop(rectangle, 3);
+                Canvas.SetLeft(rectangle, -1);
+                Canvas.SetLeft(label, Canvas.GetLeft(rectangle) + 40);
+                canvas.Children.Add(rectangle);
+                canvas.Children.Add(label);
+                _teamSelector.Items.Insert(i, canvas);
+            }
         }
 
+        private void OnRectangleClick(object sender, MouseEventArgs e)
+        {  
+                var rectangle = (Rectangle)sender;
+            rectangle.Stroke = Brushes.Brown;
+            rectangle.Effect=new DropShadowEffect();
+            /*TO DO*/
+
+        }
 
     }
-
-    
 }
