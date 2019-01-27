@@ -6,10 +6,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
-using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
 
 namespace WorldCup
@@ -38,9 +36,17 @@ namespace WorldCup
                 ref canvas,
                 Rule.MxNumOfConfederations);
             TeamSelector = new ListBox(){Width = 135,Height = 80};
+            TeamSelector.MouseDoubleClick += DoubleClick;
             AddElementOnCanvas(TeamSelector, 550,128, ref canvas);
         }
-         //Initializing rectangles in each pot
+
+        private void DoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var teamSelector = (ListBox) sender;
+            MessageBox.Show(teamSelector.SelectedItems.ToString());
+        }
+
+        //Initializing rectangles in each pot
         //Left and Top are margins relatives to the canvas (Rectangles are inside Canvas)
         private void InitRectanglesOnPots(double left,double top,ref Canvas canvas)
         {
@@ -119,12 +125,12 @@ namespace WorldCup
             var image = (Image) sender;
             image.Opacity = 1;
         }
-        /*Dumb method*/
+        /*Dumb method (useless)*/
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
             _teamSelector.Items.Clear();
             _teamSelector.Items.Insert(0, Utility.GetKeyByValue(_confederationsImages, sender));
-            //Get the corresponding confederation to the clicked image and insert on combobox's first item
+           
             for (int i = 1; i < 80; i++)
             {
                 var confederation = "test";
@@ -144,6 +150,8 @@ namespace WorldCup
                 canvas.Children.Add(label);
                 _teamSelector.Items.Insert(i, canvas);
             }
+
+            
         }
 
         private void OnRectangleClick(object sender, MouseEventArgs e)
