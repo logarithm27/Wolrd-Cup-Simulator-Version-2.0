@@ -88,12 +88,12 @@ namespace WorldCup
             while (true)
             {
                 if (top < 0) return;
-                var confederation = (Confederation.ConfederationCode) imageNumber;
-                var image = new Image {Width = (double) UiParameters.ImageParameters.Width, Height = (double) UiParameters.ImageParameters.Height, Cursor = Cursors.Hand, ToolTip = confederation.ToString()};
+                var confederation = ((Confederation.ConfederationCode)imageNumber).DescriptionAttr();
+                var image = new Image {Width = (double) UiParameters.ImageParameters.Width, Height = (double) UiParameters.ImageParameters.Height, Cursor = Cursors.Hand, ToolTip = confederation};
                 image.MouseEnter += onMouseOverImage;
                 image.MouseLeave += onMouseOutsideImage;
                 image.MouseLeftButtonUp += OnMouseClickImage;
-                _confederationsImages.Add(confederation.ToString(), image);
+                _confederationsImages.Add(confederation, image);
                 AddElementOnCanvas(image, left, top, ref canvas);
                 InsertImage(image, imageNumber);
                 top -= (double) UiParameters.ImageParameters.AddByOnTop;
