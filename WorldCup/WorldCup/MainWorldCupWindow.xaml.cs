@@ -15,7 +15,7 @@ namespace WorldCup
         {
             InitializeComponent();
             //_pots = new List<List<Rectangle>>(Rule.TeamsPerPot);
-            _userInterface = new Ui(ref _canvas);
+            _userInterface = new Ui(ref Canvas);
         }
 
 

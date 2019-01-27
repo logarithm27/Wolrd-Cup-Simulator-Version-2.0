@@ -3,17 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WorldCup"
+
         mc:Ignorable="d"
         Title="MainWorldCupWindow" Height="638" Width="800">
     <Grid Margin="0,0,0,-2">
-        <Button x:Name="button" Content="Draw" HorizontalAlignment="Left" Margin="244,380,0,0" VerticalAlignment="Top" Width="79" Click="DrawButtonClick"/>
-        <Label x:Name="pot_1" Content="Pot 1" HorizontalAlignment="Left" Margin="9,33,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="pot_2" Content="Pot 2" HorizontalAlignment="Left" Margin="169,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.757,0.538"/>
-        <Label x:Name="label_Copy1" HorizontalAlignment="Left" Margin="331,33,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="pot_4" Content="Pot 4" HorizontalAlignment="Left" Margin="493,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.973,0.462"/>
-        <Label x:Name="pot_3" Content="Pot 3" HorizontalAlignment="Left" Margin="331,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.757,0.538"/>
-        <Canvas x:Name="_canvas" HorizontalAlignment="Left" Height="526" Margin="0,59,0,0" VerticalAlignment="Top" Width="782">
+        <Button x:Name="Button" Content="Draw" HorizontalAlignment="Left" Margin="244,380,0,0" VerticalAlignment="Top" Width="79" Click="DrawButtonClick"/>
+        <Label x:Name="Pot1" Content="Pot 1" HorizontalAlignment="Left" Margin="9,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Pot2" Content="Pot 2" HorizontalAlignment="Left" Margin="169,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.757,0.538"/>
+        <Label x:Name="LabelCopy1" HorizontalAlignment="Left" Margin="331,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Pot4" Content="Pot 4" HorizontalAlignment="Left" Margin="493,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.973,0.462"/>
+        <Label x:Name="Pot3" Content="Pot 3" HorizontalAlignment="Left" Margin="331,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.757,0.538"/>
+        <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="526" Margin="0,59,0,0" VerticalAlignment="Top" Width="782">
             <Label x:Name="GroupALabel" Content="Group A" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="343"/>
             <Label x:Name="GroupBLabel" Content="Group B" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="100" Canvas.Top="343"/>
             <Label x:Name="GroupCLabel" Content="Group C" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="200" Canvas.Top="343"/>
@@ -23,6 +23,6 @@
             <Label x:Name="GroupGLabel" Content="Group F" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="500" Canvas.Top="343"/>
             <Label x:Name="GroupHLabel" Content="Group E" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="400" Canvas.Top="343"/>
         </Canvas>
-        <Label x:Name="pot_4_Copy" Content="Choose Teams" HorizontalAlignment="Left" Margin="688,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.973,0.462"/>
+        <Label x:Name="Pot4Copy" Content="Choose Teams" HorizontalAlignment="Left" Margin="688,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.973,0.462"/>
     </Grid>
 </Window>
