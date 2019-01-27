@@ -95,25 +95,15 @@ namespace WorldCup
             {
                 if (top < 0) return;
                 var confederation = ((Confederation.ConfederationCode)imageNumber).DescriptionAttr();
-                var image = new Image {Width = (double) UiParameters.ImageParameters.Width, Height = (double) UiParameters.ImageParameters.Height, Cursor = Cursors.Hand, ToolTip = confederation};
+                var image = new Image {Width = (double) UiParameters.ImageParameters.Width, Height = (double) UiParameters.ImageParameters.Height, Cursor = Cursors.Hand, ToolTip = confederation, Source = new BitmapImage(new Uri(@"pack://application:,,,/ConfederationImages/" + imageNumber + ".png")) };
                 image.MouseEnter += onMouseOverImage;
                 image.MouseLeave += onMouseOutsideImage;
                 image.MouseLeftButtonUp += OnMouseClickImage;
                 _confederationsImages.Add(confederation, image);
                 AddElementOnCanvas(image, left, top, ref canvas);
-                InsertImage(image, imageNumber);
                 top -= (double) UiParameters.ImageParameters.AddByOnTop;
                 imageNumber--;
             }
-        }
-
-        private void InsertImage(Image image,int imageNumber)
-        {
-            var directory = @"pack://application:,,,/ConfederationImages/";
-            var extention = ".png";
-            var imageNumberToString = imageNumber.ToString();
-            var relativePath = directory + imageNumberToString+extention;
-            image.Source = new BitmapImage(new Uri(relativePath));
         }
 
         private void onMouseOverImage(object sender, MouseEventArgs e)
