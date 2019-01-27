@@ -25,6 +25,7 @@ namespace WorldCup
                     return collection.FirstOrDefault(i => i.Value.Equals(obj)).Key;
                 throw new System.NotImplementedException();
             }
+            //Get description of an enumerator 
             public static string DescriptionAttr<T>(this T source)
             {
                 var fi = source.GetType().GetField(source.ToString());
