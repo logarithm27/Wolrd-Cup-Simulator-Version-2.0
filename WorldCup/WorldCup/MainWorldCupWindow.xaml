@@ -22,6 +22,7 @@
             <Label x:Name="GroupFLabel" Content="Group G" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="600" Canvas.Top="343"/>
             <Label x:Name="GroupGLabel" Content="Group F" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="500" Canvas.Top="343"/>
             <Label x:Name="GroupHLabel" Content="Group E" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="400" Canvas.Top="343"/>
+            <ComboBox x:Name="teamSelector" Canvas.Left="561" Canvas.Top="128" Width="94"/>
         </Canvas>
         <Label x:Name="pot_4_Copy" Content="Choose Teams" HorizontalAlignment="Left" Margin="688,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.973,0.462"/>
     </Grid>
