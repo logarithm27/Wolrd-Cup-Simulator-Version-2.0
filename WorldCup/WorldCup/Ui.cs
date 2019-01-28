@@ -35,6 +35,7 @@ namespace WorldCup
                 (double) UiParameters.ImageParameters.Top,
                 ref canvas,
                 Rule.MxNumOfConfederations);
+            /* This Is Useless for the moment*/
             TeamSelector = new ListBox(){Width = 135,Height = 80};
             TeamSelector.MouseDoubleClick += DoubleClick;
             AddElementOnCanvas(TeamSelector, 550,128, ref canvas);

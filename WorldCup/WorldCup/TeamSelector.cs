@@ -14,7 +14,6 @@ namespace WorldCup
         public TeamSelector()
         {
             _teamList = new ListBox{MaxWidth= 135,MaxHeight = 80};
-           
         }
     }
 }
