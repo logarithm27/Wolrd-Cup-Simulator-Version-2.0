@@ -6,11 +6,17 @@ namespace WorldCup
     public class TeamSelector : UIElement
     {
         private ListBox _teamList;
-        public ListBox TeamList {get => _teamList;set => _teamList=value;}
+        public ListBox TeamList() => _teamList;
         private Label _teamName;
         public Label TeamName { get => _teamName; set => _teamName = value; }
         private Canvas _canvas;
 
-
+        public TeamSelector()
+        {
+            _teamList = new ListBox{MaxWidth= 135,MaxHeight = 80};
+            TeamName = teamName;
+            TeamName = teamName;
+            _canvas = canvas;
+        }
     }
 }
