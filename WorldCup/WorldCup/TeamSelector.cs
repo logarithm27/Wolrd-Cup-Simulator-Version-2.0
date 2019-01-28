@@ -15,7 +15,7 @@ namespace WorldCup
         {
             _teamList = new ListBox{MaxWidth= 135,MaxHeight = 80};
             
-            TeamName = teamName;
+           
             _canvas = canvas;
         }
     }
