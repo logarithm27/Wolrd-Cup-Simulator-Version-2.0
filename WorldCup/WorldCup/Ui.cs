@@ -130,7 +130,7 @@ namespace WorldCup
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
             /* TO DO 
-             *  Display
+             *  Display countries that belongs the confederation (sender)
              */
         }
 
