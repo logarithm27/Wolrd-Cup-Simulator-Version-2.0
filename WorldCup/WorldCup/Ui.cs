@@ -129,9 +129,9 @@ namespace WorldCup
         
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
-       
-
-            
+            /* TO DO 
+             *  Display
+             */
         }
 
         private void OnRectangleClick(object sender, MouseEventArgs e)
