@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace WorldCup
@@ -9,7 +10,7 @@ namespace WorldCup
         public ListBox TeamList() => _teamList;
         private Label _teamName;
         public Label TeamName { get => _teamName; set => _teamName = value; }
-        private Canvas _canvas;
+        private Dictionary<object,object> _teamsOfDropDownMenu;
 
         public TeamSelector()
         {

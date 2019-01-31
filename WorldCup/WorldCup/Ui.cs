@@ -19,7 +19,6 @@ namespace WorldCup
         private readonly Dictionary<object, object> _confederationsImages;
         private ListBox _teamSelector;
         
-
        
 
         public Ui(ref Canvas canvas)
