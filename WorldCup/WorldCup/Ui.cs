@@ -44,7 +44,7 @@ namespace WorldCup
 
         private void DoubleClick(object sender, MouseButtonEventArgs e)
         {
-                        
+             
         }
 
         //Initializing rectangles in each pot
