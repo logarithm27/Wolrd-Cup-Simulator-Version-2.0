@@ -14,7 +14,7 @@ namespace WorldCup
         public Dictionary<Canvas, Label> TeamsInDropDownMenu => _teamsInDropDownMenu;
         public TeamSelector()
         {
-            _teamList = new ListBox{MaxWidth= 135,MaxHeight = 80};
+            _teamList = new ListBox{Width= 135,Height = 80};
             _teamsInDropDownMenu=new Dictionary<Canvas, Label>();
         }
 

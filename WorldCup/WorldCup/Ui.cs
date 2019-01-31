@@ -18,7 +18,7 @@ namespace WorldCup
         public List<Rectangle> Rectangles()=>_rectangles;
         private readonly Dictionary<object, object> _confederationsImages;
         private ListBox _teamSelector;
-        
+        private Canvas _canvas;
        
 
         public Ui(ref Canvas canvas)
@@ -36,9 +36,10 @@ namespace WorldCup
                 (double) UiParameters.ImageParameters.Top,
                 ref canvas,
                 Rule.MxNumOfConfederations);
+            _canvas = canvas;
             /* This Is Useless for the moment*/
-            
-            
+
+
         }
 
         private void DoubleClick(object sender, MouseButtonEventArgs e)
@@ -129,6 +130,7 @@ namespace WorldCup
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
             TeamSelector teamSelector = new TeamSelector();
+            AddElementOnCanvas(teamSelector.TeamList(), 550, 128, ref _canvas);
             teamSelector.OnImageClick(sender,_confederationsImages);
         }
 
