@@ -38,13 +38,12 @@ namespace WorldCup
                 Rule.MxNumOfConfederations);
             /* This Is Useless for the moment*/
             
-            //AddElementOnCanvas(TeamSelector, 550,128, ref canvas);
+            
         }
 
         private void DoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var teamSelector = (ListBox) sender;
-            MessageBox.Show(teamSelector.SelectedItems.ToString());
+                        
         }
 
         //Initializing rectangles in each pot
@@ -129,9 +128,8 @@ namespace WorldCup
         
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
-            /* TO DO 
-             *  Display countries that belongs the confederation (sender)
-             */
+            TeamSelector teamSelector = new TeamSelector();
+            teamSelector.OnImageClick(sender,_confederationsImages);
         }
 
         private void OnRectangleClick(object sender, MouseEventArgs e)
