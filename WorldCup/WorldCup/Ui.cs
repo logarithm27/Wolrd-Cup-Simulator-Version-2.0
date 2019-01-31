@@ -17,7 +17,6 @@ namespace WorldCup
         private List<Rectangle> _rectangles;
         public List<Rectangle> Rectangles()=>_rectangles;
         private readonly Dictionary<object, object> _confederationsImages;
-        private ListBox _teamSelector;
         private Canvas _canvas;
        
 
@@ -40,11 +39,6 @@ namespace WorldCup
             /* This Is Useless for the moment*/
 
 
-        }
-
-        private void DoubleClick(object sender, MouseButtonEventArgs e)
-        {
-             
         }
 
         //Initializing rectangles in each pot

@@ -11,7 +11,7 @@ namespace WorldCup
     {
         private ListBox _teamList;
         public ListBox TeamList() => _teamList;
-        private Dictionary<object,object> _teamsInDropDownMenu;
+        private readonly Dictionary<object,object> _teamsInDropDownMenu;
         public Dictionary< object,  object> TeamsInDropDownMenu => _teamsInDropDownMenu;
         public TeamSelector()
         {
@@ -19,10 +19,10 @@ namespace WorldCup
             _teamsInDropDownMenu=new Dictionary<object, object>();
         }
 
-        public void OnImageClick(object sender,Dictionary<object,object> _confederationsImages)
+        public void OnImageClick(object sender,Dictionary<object,object> confederationsImages)
         {
             _teamList.Items.Clear();
-            _teamList.Items.Insert(0, Utility.GetKeyByValue(_confederationsImages, sender));
+            _teamList.Items.Insert(0, Utility.GetKeyByValue(confederationsImages, sender));
             for (int i = 1; i < 80; i++)
             {
                 var confederation = "test"+i;
