@@ -39,7 +39,7 @@ namespace WorldCup
                 Rule.MxNumOfConfederations);
             /* This Is Useless for the moment*/
             
-            AddElementOnCanvas(TeamSelector, 550,128, ref canvas);
+            //AddElementOnCanvas(TeamSelector, 550,128, ref canvas);
         }
 
         private void DoubleClick(object sender, MouseButtonEventArgs e)
