@@ -126,7 +126,7 @@ namespace WorldCup
             var image = (Image) sender;
             image.Opacity = 1;
         }
-        
+
         private void OnMouseClickImage(object sender, MouseEventArgs e)
         {
             TeamSelector teamSelector = new TeamSelector();
