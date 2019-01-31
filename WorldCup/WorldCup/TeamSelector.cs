@@ -12,7 +12,7 @@ namespace WorldCup
         private ListBox _teamList;
         public ListBox TeamList() => _teamList;
         private Dictionary<object,object> _teamsInDropDownMenu;
-        public Dictionary<object, object> TeamsInDropDownMenu => _teamsInDropDownMenu;
+        public Dictionary< object,  object> TeamsInDropDownMenu => _teamsInDropDownMenu;
         public TeamSelector()
         {
             _teamList = new ListBox{Width= 135,Height = 80};
@@ -42,14 +42,14 @@ namespace WorldCup
                 canvas.Children.Add(label);
                 canvas.MouseLeftButtonUp += OnTeamSelected;
                _teamList.Items.Insert(i, canvas);
-                _teamsInDropDownMenu.Add(canvas,label);
+                _teamsInDropDownMenu.Add(label,canvas);
             }
 
         }
 
         private void OnTeamSelected(object sender, MouseEventArgs e)
-        {
-            var team =(Label)Utility.GetKeyByValue(TeamsInDropDownMenu, sender);
+        { 
+            var team = (Label)Utility.GetKeyByValue(TeamsInDropDownMenu, sender);
             MessageBox.Show(team.Content.ToString());
         }
 
