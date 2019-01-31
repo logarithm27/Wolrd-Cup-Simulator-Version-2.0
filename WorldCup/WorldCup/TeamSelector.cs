@@ -15,7 +15,7 @@ namespace WorldCup
         public Dictionary< object,  object> TeamsInDropDownMenu => _teamsInDropDownMenu;
         public TeamSelector()
         {
-            _teamList = new ListBox{Width= 135,Height = 80};
+            _teamList = new ListBox{Width= 130,Height = 90};
             _teamsInDropDownMenu=new Dictionary<object, object>();
         }
 
@@ -43,6 +43,7 @@ namespace WorldCup
                 canvas.MouseLeftButtonUp += OnTeamSelected;
                _teamList.Items.Insert(i, canvas);
                _teamsInDropDownMenu.Add(label,canvas);
+
             }
 
         }
