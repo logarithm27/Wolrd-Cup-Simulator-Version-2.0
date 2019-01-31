@@ -28,7 +28,7 @@ namespace WorldCup
                 var confederation = "test"+i;
                 Label label = new Label();
                 label.Content = confederation;
-                Canvas canvas = new Canvas { Width = 45, Height = 25 };
+                Canvas canvas = new Canvas { Width = _teamList.Width, Height = 25 };
                 var rectangle = new Rectangle
                 {
                     Width = (double)UiParameters.ShapeParameters.Width,
@@ -42,7 +42,7 @@ namespace WorldCup
                 canvas.Children.Add(label);
                 canvas.MouseLeftButtonUp += OnTeamSelected;
                _teamList.Items.Insert(i, canvas);
-                _teamsInDropDownMenu.Add(label,canvas);
+               _teamsInDropDownMenu.Add(label,canvas);
             }
 
         }
