@@ -18,7 +18,9 @@ namespace WorldCup
         public List<Rectangle> Rectangles()=>_rectangles;
         private readonly Dictionary<object, object> _confederationsImages;
         private ListBox _teamSelector;
-        public ListBox TeamSelector { get => _teamSelector; set => _teamSelector = value; }
+        
+
+       
 
         public Ui(ref Canvas canvas)
         {
