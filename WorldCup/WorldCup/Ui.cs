@@ -35,8 +35,7 @@ namespace WorldCup
                 Rule.MxNumOfConfederations);
             _canvas = canvas;
             /* This Is Useless for the moment*/
-          
-            data.ReadDatabase();
+         
 
         }
 
