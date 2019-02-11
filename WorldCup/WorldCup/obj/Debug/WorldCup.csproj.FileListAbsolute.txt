@@ -27,3 +27,13 @@ D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\obj\De
 D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\obj\Debug\WorldCup.csproj.CoreCompileInputs.cache
 D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\obj\Debug\WorldCup.exe
 D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\obj\Debug\WorldCup.pdb
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\bin\Debug\EntityFramework.dll
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\bin\Debug\EntityFramework.SqlServer.dll
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\bin\Debug\System.Data.SQLite.dll
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\bin\Debug\System.Data.SQLite.EF6.dll
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\bin\Debug\System.Data.SQLite.Linq.dll
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\bin\Debug\EntityFramework.xml
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\bin\Debug\EntityFramework.SqlServer.xml
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\bin\Debug\System.Data.SQLite.xml
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\bin\Debug\System.Data.SQLite.dll.config
+D:\FootBall\logarithm27\Wolrd-Cup-Simulator-Version-2.0\WorldCup\WorldCup\obj\Debug\WorldCup.csproj.CopyComplete
