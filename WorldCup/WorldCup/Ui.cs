@@ -1,7 +1,6 @@
 ﻿/*Maftoul Omar 2019*/
 using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
