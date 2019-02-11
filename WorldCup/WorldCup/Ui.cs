@@ -1,6 +1,7 @@
 ﻿/*Maftoul Omar 2019*/
 using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -36,6 +37,7 @@ namespace WorldCup
             _canvas = canvas;
             /* This Is Useless for the moment*/
             var data = new TeamsDataBase();
+            data.ReadDatabase();
 
         }
 

@@ -1,5 +1,6 @@
 ﻿/*Maftoul Omar 2019*/
 
+using System.Data;
 using System.Data.SQLite;
 
 
@@ -7,7 +8,7 @@ namespace WorldCup
 {
         public class TeamsDataBase
         {
-            private readonly string _dataSource = @"pack://application:,,,/Data/teams.db";
+            private readonly string _dataSource = @"teams.db";
             private string _sqlConnectionString = "";
             private SQLiteConnection _sqlConnection;
 
@@ -27,9 +28,9 @@ namespace WorldCup
                 _sqlConnection.Close();
             }
 
-            public void ReadDatabase()
+            public string ReadDatabase()
             {
-                //var command = 
+            
             }
 
         }
