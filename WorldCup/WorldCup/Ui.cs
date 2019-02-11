@@ -10,7 +10,7 @@ using System.Windows.Shapes;
 
 namespace WorldCup
 {
-    public partial class Ui
+    public  class Ui
     {
         private List<Rectangle> _rectangles;
         public List<Rectangle> Rectangles()=>_rectangles;
