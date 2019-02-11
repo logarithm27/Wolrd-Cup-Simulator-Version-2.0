@@ -34,9 +34,6 @@ namespace WorldCup
                 ref canvas,
                 Rule.MxNumOfConfederations);
             _canvas = canvas;
-            /* This Is Useless for the moment*/
-         
-
         }
 
         //Initializing rectangles in each pot
