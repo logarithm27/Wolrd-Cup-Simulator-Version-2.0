@@ -130,9 +130,6 @@ namespace WorldCup
 
         private void OnRectangleClick(object sender, MouseEventArgs e)
         {  
-            var rectangle = (Rectangle)sender;
-            rectangle.Stroke = Brushes.Brown;
-            rectangle.Effect=new DropShadowEffect();
             /*TO DO*/
 
         }
