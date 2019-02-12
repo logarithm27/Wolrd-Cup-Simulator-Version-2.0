@@ -17,7 +17,7 @@ namespace WorldCup
             }
             private void OpenConnection()
             {
-                var  sqlConnectionStrin = $"Data Source = {_dataSource}";
+                var  sqlConnectionString = $"Data Source = {_dataSource}";
                 _sqlConnection = new SQLiteConnection(sqlConnectionString);
                 _sqlConnection.Open();
              }
