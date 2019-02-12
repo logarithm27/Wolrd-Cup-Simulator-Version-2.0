@@ -28,11 +28,11 @@ namespace WorldCup
                 _sqlConnection.Close();
             }
 
-            //public string ReadDatabase()
-            //{
-            
-            //}
+        public string ReadDatabase()
+        {
 
         }
+
+    }
 
 }
