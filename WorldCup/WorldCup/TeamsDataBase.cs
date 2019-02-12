@@ -18,7 +18,7 @@ namespace WorldCup
             }
             private void OpenConnection()
             {
-                _sqlConnectionString = $"Data Source = {_dataSource}; Version =3;";
+                _sqlConnectionString = $"Data Source = {_dataSource}";
                 _sqlConnection = new SQLiteConnection(_sqlConnectionString);
                 _sqlConnection.Open();
              }
@@ -28,10 +28,10 @@ namespace WorldCup
                 _sqlConnection.Close();
             }
 
-            public string ReadDatabase()
-            {
+            //public string ReadDatabase()
+            //{
             
-            }
+            //}
 
         }
 
