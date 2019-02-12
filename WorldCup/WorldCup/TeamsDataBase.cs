@@ -9,7 +9,6 @@ namespace WorldCup
         public class TeamsDataBase
         {
             private readonly string _dataSource = @"teams.db";
-            private string _sqlConnectionString = "";
             private SQLiteConnection _sqlConnection;
 
             public TeamsDataBase()
@@ -18,8 +17,8 @@ namespace WorldCup
             }
             private void OpenConnection()
             {
-                _sqlConnectionString = $"Data Source = {_dataSource}";
-                _sqlConnection = new SQLiteConnection(_sqlConnectionString);
+                var  sqlConnectionString = $"Data Source = {_dataSource}";
+                _sqlConnection = new SQLiteConnection(sqlConnectionString);
                 _sqlConnection.Open();
              }
 
