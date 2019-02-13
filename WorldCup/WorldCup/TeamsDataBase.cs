@@ -29,7 +29,7 @@ namespace WorldCup
 
         public string ReadDatabase()
         {
-            /*TO DO */
+            /*TO DO /
         }
 
     }
