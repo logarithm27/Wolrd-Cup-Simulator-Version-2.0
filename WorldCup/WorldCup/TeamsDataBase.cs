@@ -23,7 +23,7 @@ namespace WorldCup
 
             private void CloseConnection()
             {
-                _sqlConnection.Close()
+                _sqlConnection.Close();
             }
 
         public string ReadDatabase()
