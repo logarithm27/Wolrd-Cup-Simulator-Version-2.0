@@ -74,6 +74,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Confederation.cs" />
+    <Compile Include="ITeam.cs" />
     <Compile Include="Rule.cs" />
     <Compile Include="TeamsDataBase.cs" />
     <Compile Include="TeamSelector.cs" />
