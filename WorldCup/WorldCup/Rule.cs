@@ -7,14 +7,7 @@ namespace WorldCup
         public const int MaxGroups = 8;
         public const int MaxPots = 4;
         public const int MxNumOfConfederations = 6;
-        public enum Confederation
-        {
-            Asia ='A',
-            Africa ='F',
-            NorthAndCentralAmerica='N',
-            SouthAmerica='S',
-            Europe='E'
-        }
+     
 
         public enum MaxTeamsPerConfederation
         {
