@@ -13,17 +13,17 @@ namespace WorldCup
         public string TeamFlag() => _teamFlag;
         public string GetConfederation(Team team)
         {
-
+            /*TO DO*/
         }
 
         public int GetMaxAcceptedTeamsByConfederation(Team team, List<List<int>> pots)
         {
-
+            /*TO DO*/
         }
 
         public bool TeamIsAllowed(Team team)
         {
-
+            /*TO DO*/
         }
     }
 }
