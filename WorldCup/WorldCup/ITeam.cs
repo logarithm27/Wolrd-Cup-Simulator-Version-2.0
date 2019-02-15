@@ -1,9 +1,11 @@
-﻿namespace WorldCup
+﻿using System.Collections.Generic;
+
+namespace WorldCup
 {
     public interface ITeam
     {
-         string GetConfederation();
-        int GetMaxAcceptedTeamsByConfederation();
-        bool TeamIsAllowed();
+        string GetConfederation(Team team);
+        int GetMaxAcceptedTeamsByConfederation(Team team, List<List<int >> pots);
+        bool TeamIsAllowed(Team team);
     }
 }

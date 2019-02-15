@@ -76,6 +76,7 @@
     <Compile Include="Confederation.cs" />
     <Compile Include="ITeam.cs" />
     <Compile Include="Rule.cs" />
+    <Compile Include="Team.cs" />
     <Compile Include="TeamsDataBase.cs" />
     <Compile Include="TeamSelector.cs" />
     <Compile Include="Ui.cs" />

@@ -1,5 +1,4 @@
-﻿
-namespace WorldCup
+﻿namespace WorldCup
 {
     public static class Rule
     {
