@@ -10,7 +10,8 @@ namespace WorldCup
 {
         public class TeamsDataBase
         {
-            private readonly string _dataSource = @"teams.db";
+            private readonly string path = @"pack://application:,,,/Data";
+            private readonly string _dataSource = @"pack://application:,,,/Data/teams.db";
             private SQLiteConnection _sqlConnection;
 
             public TeamsDataBase()
