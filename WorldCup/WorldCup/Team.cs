@@ -10,6 +10,14 @@ namespace WorldCup
         public string TeamSConfederation() => _team_s_confederation;
 
         private string _teamFlag;
+
+        public Team(string teamName, string team_s_confederation, string teamFlag)
+        {
+            _teamName = teamName;
+            _team_s_confederation = team_s_confederation;
+            _teamFlag = teamFlag;
+        }
+
         public string TeamFlag() => _teamFlag;
         public string GetConfederation(Team team)
         {

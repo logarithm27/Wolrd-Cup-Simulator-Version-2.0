@@ -1,5 +1,6 @@
 ﻿/*Maftoul Omar 2019*/
 
+using System;
 using System.Data.SQLite;
 
 
@@ -28,6 +29,7 @@ namespace WorldCup
 
         public string ReadDatabase()
         {
+            return String.Empty;
             /* TO DO*/
         }
 
