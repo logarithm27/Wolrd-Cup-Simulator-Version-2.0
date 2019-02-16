@@ -26,10 +26,4 @@ namespace WorldCup
             /*TO DO*/
         }
     }
-
-    public interface IGroup
-    {
-        List<List<int>> GetGroups();
-        
-    }
 }
