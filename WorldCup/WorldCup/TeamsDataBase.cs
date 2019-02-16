@@ -2,6 +2,8 @@
 
 using System;
 using System.Data.SQLite;
+using System.IO;
+using System.Windows;
 
 
 namespace WorldCup
@@ -19,8 +21,11 @@ namespace WorldCup
             {
                 var  sqlConnectionString = $"Data Source = {_dataSource}";
                 _sqlConnection = new SQLiteConnection(sqlConnectionString);
-                _sqlConnection.Open();
-             }
+                if( !File.Exists("./teams.db") )
+                    SQLiteConnection.CreateFile("teams.db");
+                MessageBox.Show("created");
+                //_sqlConnection.Open();
+            }
 
             private void CloseConnection()
             {
