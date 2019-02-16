@@ -34,6 +34,7 @@ namespace WorldCup
                 ref canvas,
                 Rule.MxNumOfConfederations);
             _canvas = canvas;
+            var databaseInstace = new TeamsDataBase();
         }
 
         //Initializing rectangles in each pot

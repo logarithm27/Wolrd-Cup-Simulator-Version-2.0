@@ -23,7 +23,6 @@ namespace WorldCup
                 _sqlConnection = new SQLiteConnection(sqlConnectionString);
                 if( !File.Exists("./teams.db") )
                     SQLiteConnection.CreateFile("teams.db");
-                MessageBox.Show("created");
                 //_sqlConnection.Open();
             }
 
