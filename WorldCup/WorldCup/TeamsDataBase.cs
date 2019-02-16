@@ -11,8 +11,7 @@ namespace WorldCup
         public class TeamsDataBase
         {
 
-            private readonly string _path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Data\","teams.db");
-            private readonly string _dataSource = @"teams.db";
+            private readonly string _path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace(@"\bin\Debug",""), @"Data\","teams.db");
             private SQLiteConnection _sqlConnection;
 
             public TeamsDataBase()
@@ -21,13 +20,12 @@ namespace WorldCup
             }
             private void OpenConnection()
             {
-                var  sqlConnectionString = $"Data Source = {_dataSource}"+";";
+                var  sqlConnectionString = $"Data Source = {_path}"+";";
                 _sqlConnection = new SQLiteConnection(sqlConnectionString);
                 if (!File.Exists(_path))
-                    MessageBox.Show(_path);
-                //SQLiteConnection.CreateFile(_path);
-                //_sqlConnection.Open();
-            }
+                    SQLiteConnection.CreateFile(_path);
+            //_sqlConnection.Open();
+        }
 
             private void CloseConnection()
             {
