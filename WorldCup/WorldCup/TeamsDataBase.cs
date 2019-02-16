@@ -10,7 +10,8 @@ namespace WorldCup
 {
         public class TeamsDataBase
         {
-            private readonly string _path = @"pack://application:,,,/Data/";
+
+            private readonly string _path = Path.Combine(Environment.CurrentDirectory, @"Data\","teams.db");
             private readonly string _dataSource = @"teams.db";
             private SQLiteConnection _sqlConnection;
 
@@ -22,8 +23,9 @@ namespace WorldCup
             {
                 var  sqlConnectionString = $"Data Source = {_dataSource}"+";";
                 _sqlConnection = new SQLiteConnection(sqlConnectionString);
-                if( !File.Exists(_path+_dataSource) )
-                    SQLiteConnection.CreateFile(Path.Combine(_path ,_dataSource));
+                if( !File.Exists(_path) )
+
+                    //SQLiteConnection.CreateFile(_path);
                 //_sqlConnection.Open();
             }
 
