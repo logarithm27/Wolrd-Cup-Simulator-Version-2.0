@@ -23,7 +23,7 @@ namespace WorldCup
                 var  sqlConnectionString = $"Data Source = {_dataSource}"+";";
                 _sqlConnection = new SQLiteConnection(sqlConnectionString);
                 if( !File.Exists(_path+_dataSource) )
-                    SQLiteConnection.CreateFile(_path+_dataSource);
+                    SQLiteConnection.CreateFile(Path.Combine(_path ,_dataSource));
                 //_sqlConnection.Open();
             }
 
