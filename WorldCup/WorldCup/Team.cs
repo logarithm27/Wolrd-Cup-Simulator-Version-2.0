@@ -13,16 +13,19 @@ namespace WorldCup
         public string TeamFlag() => _teamFlag;
         public string GetConfederation(Team team)
         {
+            return string.Empty;
             /*TO DO*/
         }
 
         public int GetMaxAcceptedTeamsByConfederation(Team team, List<List<int>> pots)
         {
+            return -1;
             /*TO DO*/
         }
 
         public bool TeamIsAllowed(Team team)
         {
+            return false;
             /*TO DO*/
         }
     }
