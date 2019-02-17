@@ -1,6 +1,6 @@
 ﻿namespace WorldCup
 {
-    public class Group
+    public class Group : IGroup
     {
 
     }
