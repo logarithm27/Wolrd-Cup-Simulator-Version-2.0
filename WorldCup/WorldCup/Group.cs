@@ -4,6 +4,7 @@ namespace WorldCup
 {
     public class Group : IGroup
     {
+        private List<List<Team>> _getGroups;
         public List<List<int>> GetGroups()
         {
             throw new System.NotImplementedException();
@@ -13,5 +14,6 @@ namespace WorldCup
         {
             throw new System.NotImplementedException();
         }
+
     }
 }
