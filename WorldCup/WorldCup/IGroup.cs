@@ -8,4 +8,9 @@ namespace WorldCup
         bool CheckConstraint(List<Team> teams);
 
     }
+
+    public class Group
+    {
+
+    }
 }
