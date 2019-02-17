@@ -8,6 +8,7 @@ namespace WorldCup
         private List<List<Team>> GetGroup() => _getGroups;
         public List<List<int>> GetGroups()
         {
+            /*TO DO*/
             throw new System.NotImplementedException();
         }
 
