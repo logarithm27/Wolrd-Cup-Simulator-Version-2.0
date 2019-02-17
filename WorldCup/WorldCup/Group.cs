@@ -14,6 +14,7 @@ namespace WorldCup
 
         public bool CheckConstraint(List<Team> teams)
         {
+            /*TO DO*/
             throw new System.NotImplementedException();
         }
 
