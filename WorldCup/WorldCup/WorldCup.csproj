@@ -89,6 +89,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Confederation.cs" />
+    <Compile Include="Group.cs" />
     <Compile Include="IGroup.cs" />
     <Compile Include="ITeam.cs" />
     <Compile Include="Rule.cs" />
