@@ -5,6 +5,7 @@ namespace WorldCup
     public class Group : IGroup
     {
         private List<List<Team>> _getGroups;
+        private List<List<Team>> GetGroup() => _getGroups;
         public List<List<int>> GetGroups()
         {
             throw new System.NotImplementedException();
